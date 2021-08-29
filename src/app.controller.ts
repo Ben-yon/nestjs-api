@@ -6,7 +6,7 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  @Header('Content-Type', 'text/html')
+  // @Header('Content-Type', 'text/html')
   getHello(): any {
     return this.appService.getHello();
   }
