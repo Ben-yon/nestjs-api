@@ -32,7 +32,12 @@ export class ProductsController {
   }
 
   @Patch(':id')
-  updateProduct(@Param('id') prodId: string) {
+  updateProduct(
+    @Param('id') prodId: string,
+    @Body('title') prodTitle: string,
+    @Body('description') prodDesc: string,
+    @Body('price') prodPrice: number,
+  ) {
     9;
   }
 }
