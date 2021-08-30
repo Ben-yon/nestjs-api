@@ -30,7 +30,7 @@ export class ProductsService {
     if (price) {
       updatedProduct.price = price;
     }
-    this.products[index] = { ...product };
+    this.products[index] = updatedProduct;
   }
 
   private findProduct(id: string): [Product, number] {
@@ -41,5 +41,4 @@ export class ProductsService {
     }
     return [product, productIndex];
   }
-}
 }
