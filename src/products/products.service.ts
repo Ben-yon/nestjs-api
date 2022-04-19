@@ -11,13 +11,16 @@ export class ProductsService {
     this.products.push(newProduct);
     return prodId;
   }
+
   getProducts() {
     return [...this.products];
   }
+
   getSingleProduct(productId: string) {
     const product = this.findProduct(productId)[0];
     return { ...product };
   }
+
   updateProduct(productId: string, title: string, desc: string, price: number) {
     const [product, index] = this.findProduct(productId);
     const updatedProduct = { ...product };
